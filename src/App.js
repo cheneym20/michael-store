@@ -8,10 +8,9 @@ function App() {
 const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/1`)
+    fetch(`https://fakestoreapi.com/products/`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setProducts(data);
       })
   }, [])
