@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import { React, useEffect, useState } from "react";
 import './App.css';
 
-
 function App() {
   const [products, setProducts] = useState([]);
 
@@ -17,14 +16,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Use the fake store data to create your own store front end project to show.
-        </p>
-        <a href="https://fakestoreapi.com/"> Fake Store Data</a>
-        <p>You can Do THIS!!!!!!y</p>
+        <div className="header-title">Products</div>
+        <div className="header-title">Filters</div>
+        
       </header>
-
+      <div className="product-container">
       {
         Array.isArray(products) ?
           products?.map((product) => (
@@ -32,16 +28,25 @@ function App() {
               <li>
                 <b>Name</b>: {product.title}
               </li>
+              <li>
+                <b>Price</b>: {product.price}
+              </li>
             </div>
           ))
           : <div className="event" key={products.id}>
             <li>
               <b>Name</b>: {products.title}
             </li>
+            <li>
+              <b>Price</b>: {products.price}
+            </li>
           </div>
 
       }
-
+      </div>
+      <div className="main-container">
+Product Information - Product Image
+      </div>
     </div>
   );
 }

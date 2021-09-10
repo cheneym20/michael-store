@@ -15,17 +15,51 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.header-title:nth-child(1){
+  width: 20%;
+  max-width: 300px;
+}
+.header-title:nth-child(2){
+  width: 80%;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.product-container{
+  display: flex;
+  width: 20%;
+  max-width: 300px;
+  min-width: 125px;
+  flex-direction: column;
+  list-style: none;
+  font-size: 1.25vw;
+  border-right: 1px solid black;
+}
+
+.event{
+  text-align: left;
+  padding:1.5vw;
+  border-bottom: 1px solid black;
+}
+.event:hover{
+  background-color: #b3e7f5;
+}
+
+.main-container{
+  display: grid;
+  width:80%;
+  background-color: red;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +68,12 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .event {
+     font-size: 14px;
+     padding:15px;
   }
 }
